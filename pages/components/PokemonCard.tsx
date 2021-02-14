@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './PokemonCard.module.css'
 import { useQuery } from '@apollo/client';
 import { GET_POKEMON } from '../graphql/get-pokemon';
 
 export function PokemonCard({ id }) {
+
+  const [selectedEvolution, setSelectedEvolution] = useState(null);
+
+  function onEvolutionSelected({ target }) {
+    console.log(`Evolution: ${target.value}`);
+    setSelectedEvolution(target.value);
+  }
 
   const { error, data } = useQuery(GET_POKEMON, {
     variables: { id },
@@ -27,7 +34,7 @@ export function PokemonCard({ id }) {
         </div>
         {pokemon.prev_evolution && <div>
           {pokemon.prev_evolution.map(pokemon => (
-            <div key={pokemon.num}>
+            <div key={pokemon.num} onClick={onEvolutionSelected}>
             Prev Evolution
               <div>
                 <button value={pokemon.num}>
@@ -40,7 +47,7 @@ export function PokemonCard({ id }) {
         }
         {pokemon.next_evolution && <div>
             {pokemon.next_evolution.map(pokemon => (
-              <div key={pokemon.num}>
+              <div key={pokemon.num} onClick={onEvolutionSelected}>
               Next Evolution
                 <div>
                   <button value={pokemon.num}>
