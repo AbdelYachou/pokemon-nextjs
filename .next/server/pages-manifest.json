@@ -3,6 +3,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/": "pages/index.js",
-  "/api/pokemons": "pages/api/pokemons.js",
-  "/api/graphql": "pages/api/graphql.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/api/graphql": "pages/api/graphql.js",
+  "/api/pokemons": "pages/api/pokemons.js"
 }
