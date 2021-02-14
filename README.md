@@ -1,9 +1,3 @@
-# Runroom Fullstack Test
-
-Está es una prueba para validar los conocimientos de las personas candidatas al puesto de fullstack developer en Runroom.
-
-**Spoiler Alert!**... va de Pokemons
-
 ## Stack Tecnológico
 
 * React
