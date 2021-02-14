@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { PokemonsList } from '../components/pokemons-list';
+import styles from './PokemonsContainer.module.css'
+import { PokemonsList } from '../components/PokemonsList';
 
 export function PokemonsContainer() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -10,7 +11,7 @@ export function PokemonsContainer() {
   }
 
   return (
-    <div>
+    <div className={styles.conatiner}>
       <PokemonsList onPokemonSelected={onPokemonSelected}/>
     </div>
   );

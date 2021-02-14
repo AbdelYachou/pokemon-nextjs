@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './PokemonsList.module.css'
 import { useQuery } from '@apollo/client';
 import { GET_POKEMONS } from '../graphql/get-pokemons';
 
@@ -9,12 +10,10 @@ export function PokemonsList({ onPokemonSelected }) {
   if (data)
     return (
       <div>
-        <ul>
+        <ul className={styles.pokemonslist}>
           {data.getPokemons.map(pokemon => (
-            <li key={pokemon.id} onClick={onPokemonSelected}>
-              <button value={pokemon.num}>
-                {pokemon.img}
-              </button>
+            <li className={styles.card} key={pokemon.id} onClick={onPokemonSelected}>
+                <input type="image" src={pokemon.img} value={pokemon.num} className={styles.cardimage}/>
             </li>
           ))}
         </ul>
