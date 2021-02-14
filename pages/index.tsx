@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Logo from '../ui/svg/pokemon-logo.svg';
 import { PokemonsContainer } from './containers/PokemonsContainer';
+import { Footer } from './containers/Footer';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
       <Logo className="logo"/>
       <PokemonsContainer />
+      <Footer />
     </>
   );
 };

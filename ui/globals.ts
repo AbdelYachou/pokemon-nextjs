@@ -72,9 +72,18 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     max-height: 50px;
     display: block;
-
   }
-  
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-top: 50px;
+    width: 100%;
+    color: grey;
+    background: ${DARK};
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
