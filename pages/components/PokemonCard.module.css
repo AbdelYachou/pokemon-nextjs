@@ -1,0 +1,13 @@
+.presentation {
+  text-align: center;
+}
+
+.presentation > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details {
+
+}

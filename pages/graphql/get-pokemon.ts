@@ -10,6 +10,14 @@ query pokemon ($id: String!){
     height
     weight
     weaknesses
+    prev_evolution {
+     num
+     name
+    }
+    next_evolution {
+     num
+     name
+    }
   }
 }
 `;
