@@ -1,3 +1,15 @@
-.conatiner {
+.container {
+  display: grid;
+  grid-template-columns: 20% auto;
+  padding-bottom: 50px;
+}
+
+.listcontainer {
+  float: left;
   width: min-content;
+}
+
+.cardcontainer {
+  float: left;
+  margin: 0 auto;
 }
