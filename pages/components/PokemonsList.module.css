@@ -1,0 +1,15 @@
+.pokemonslist {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  padding-inline-start: 0;
+  grid-gap: 0 10px;
+}
+
+.card {
+  list-style: none;
+  text-align: center;
+}
+
+.cardimage {
+  height: auto;
+}

@@ -68,6 +68,13 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
   }
 
+  .logo {
+    max-width: 100%;
+    max-height: 50px;
+    display: block;
+
+  }
+  
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
