@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import styles from './PokemonsContainer.module.css'
 import { PokemonsList } from '../components/PokemonsList';
-import { PokemonCard } from '../components/PokemonCard';
+import { SelectedCard } from '../components/SelectedCard';
+import { EvolutionCard } from '../components/EvolutionCard';
 
 export function PokemonsContainer() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [selectedEvolution, setSelectedEvolution] = useState(null);
 
   function onPokemonSelected({ target }) {
     console.log(`Selected: ${target.value}`);
     setSelectedPokemon(target.value);
+    setSelectedEvolution(null);
+  }
+
+  function onEvolutionSelected({ target }) {
+    console.log(`Evolution: ${target.value}`);
+    setSelectedEvolution(target.value);
   }
 
   return (
@@ -17,7 +25,12 @@ export function PokemonsContainer() {
         <PokemonsList onPokemonSelected={onPokemonSelected}/>
       </div>
       <div className={styles.cardcontainer}>
-        {selectedPokemon && <PokemonCard id={selectedPokemon} />}
+        <div className={styles.carditem}>
+          <SelectedCard id={selectedPokemon} onChange={onEvolutionSelected}/>
+        </div>
+        <div className={styles.carditem}>
+          <EvolutionCard id={selectedEvolution} />
+        </div>
       </div>
     </div>
   );
