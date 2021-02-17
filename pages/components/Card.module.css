@@ -5,6 +5,9 @@
 }
 
 .evolution {
+  margin: auto;
+  text-align: center;
   float: left;
   width: 50%;
+  margin: auto;
 }

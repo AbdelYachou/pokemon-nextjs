@@ -9,6 +9,17 @@
   list-style: none;
   text-align: center;
 }
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cardactive {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.carddeactive {
+  background: '#1b1d1c';
+}
 
 .cardimage {
   height: auto;

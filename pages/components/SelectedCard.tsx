@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PokemonCard } from '../components/PokemonCard';
 import styles from './Card.module.css'
+import Pokeball from '../../ui/svg/pokeball.svg';
 import { useQuery } from '@apollo/client';
 import { GET_POKEMON } from '../graphql/get-pokemon';
 
@@ -17,9 +18,9 @@ export function SelectedCard({ id, onChange }) {
       return (
         <div>
           <PokemonCard pokemon={pokemon} />
-          {pokemon.prev_evolution && <div className={styles.evolution}>
+          {pokemon.prev_evolution && <div>
             {pokemon.prev_evolution.map(pokemon => (
-              <div key={pokemon.num} onClick={onChange}>
+              <div className={styles.evolution} key={pokemon.num} onClick={onChange}>
               Prev Evolution
                 <div>
                   <button value={pokemon.num}>
@@ -30,9 +31,9 @@ export function SelectedCard({ id, onChange }) {
             ))}
           </div>
           }
-          {pokemon.next_evolution && <div className={styles.evolution}>
+          {pokemon.next_evolution && <div>
               {pokemon.next_evolution.map(pokemon => (
-                <div key={pokemon.num} onClick={onChange}>
+                <div className={styles.evolution} key={pokemon.num} onClick={onChange}>
                 Next Evolution
                   <div>
                     <button value={pokemon.num}>
@@ -46,5 +47,8 @@ export function SelectedCard({ id, onChange }) {
         </div>
       );
   }
-  return (<div className={styles.center}>Select a Pokemon</div>);
-}
+  return (
+    <div className={styles.center}>
+      <Pokeball /> Select a Pokemon
+    </div>
+  );}
