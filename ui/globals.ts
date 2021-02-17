@@ -78,7 +78,8 @@ const GlobalStyle = createGlobalStyle`
     position: fixed;
     left: 0;
     bottom: 0;
-    padding-top: 50px;
+    height: 60px;
+    padding-top: 30px;
     width: 100%;
     color: grey;
     background: ${DARK};

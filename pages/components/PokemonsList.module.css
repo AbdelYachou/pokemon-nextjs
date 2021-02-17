@@ -13,3 +13,10 @@
 .cardimage {
   height: auto;
 }
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .pokemonslist {
+    display: flex;
+  }
+}

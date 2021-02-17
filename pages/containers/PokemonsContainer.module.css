@@ -1,11 +1,13 @@
 .container { /*split*/
-  height: 100%;
-  overflow: auto;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .listcontainer { /*left*/
   float: left;
   width: 30%;
+  max-height: 100vh;
+  overflow: scroll;
 }
 
 .selectedcard{
@@ -21,7 +23,6 @@
   padding-left: 100px;
   padding-right: 100px;
 }
-
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
