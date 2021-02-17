@@ -1,4 +1,4 @@
-import styles from './SelectedCard.module.css'
+import styles from './PokemonCard.module.css'
 
 export function PokemonCard({ pokemon }) {
   return (

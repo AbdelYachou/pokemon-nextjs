@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import styles from './SelectedCard.module.css'
-import { EvolutionCard } from '../components/EvolutionCard';
 import { PokemonCard } from '../components/PokemonCard';
+import styles from './Card.module.css'
 import { useQuery } from '@apollo/client';
 import { GET_POKEMON } from '../graphql/get-pokemon';
 
@@ -18,7 +17,7 @@ export function SelectedCard({ id, onChange }) {
       return (
         <div>
           <PokemonCard pokemon={pokemon} />
-          {pokemon.prev_evolution && <div>
+          {pokemon.prev_evolution && <div className={styles.evolution}>
             {pokemon.prev_evolution.map(pokemon => (
               <div key={pokemon.num} onClick={onChange}>
               Prev Evolution
@@ -31,7 +30,7 @@ export function SelectedCard({ id, onChange }) {
             ))}
           </div>
           }
-          {pokemon.next_evolution && <div>
+          {pokemon.next_evolution && <div className={styles.evolution}>
               {pokemon.next_evolution.map(pokemon => (
                 <div key={pokemon.num} onClick={onChange}>
                 Next Evolution
@@ -47,5 +46,5 @@ export function SelectedCard({ id, onChange }) {
         </div>
       );
   }
-  return (<div>Select an Evolution</div>);
+  return (<div className={styles.center}>Select a Pokemon</div>);
 }

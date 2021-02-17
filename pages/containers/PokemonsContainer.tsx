@@ -24,13 +24,11 @@ export function PokemonsContainer() {
       <div className={styles.listcontainer}>
         <PokemonsList onPokemonSelected={onPokemonSelected}/>
       </div>
-      <div className={styles.cardcontainer}>
-        <div className={styles.carditem}>
-          <SelectedCard id={selectedPokemon} onChange={onEvolutionSelected}/>
-        </div>
-        <div className={styles.carditem}>
-          <EvolutionCard id={selectedEvolution} />
-        </div>
+      <div className={styles.selectedcard}>
+        <SelectedCard id={selectedPokemon} onChange={onEvolutionSelected}/>
+      </div>
+      <div className={styles.evolutioncard}>
+        <EvolutionCard id={selectedEvolution} />
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+.center{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.evolution {
+  float: left;
+  width: 50%;
+}

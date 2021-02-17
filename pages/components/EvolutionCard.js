@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './SelectedCard.module.css'
 import { PokemonCard } from '../components/PokemonCard';
+import styles from './Card.module.css'
 import { useQuery } from '@apollo/client';
 import { GET_POKEMON } from '../graphql/get-pokemon';
 
@@ -16,5 +16,5 @@ export function EvolutionCard({ id }) {
         <PokemonCard pokemon={pokemon} />
       );
   }
-  return (<div>Select an Evolution</div>);
+  return (<div className={styles.center}>Select an Evolution</div>);
 }
