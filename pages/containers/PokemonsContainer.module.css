@@ -5,31 +5,49 @@
 
 .listcontainer { /*left*/
   float: left;
-  width: 30%;
+  width: 25%;
   max-height: 100vh;
   overflow: scroll;
 }
 
 .selectedcard{
   float: left;
-  width: 35%;
+  width: 37.5%;
   padding-left: 100px;
   padding-right: 100px;
 }
 
 .evolutioncard{
   float: left;
-  width: 35%;
+  width: 37.5%;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
+/*
+  ##Device = Tablets, Ipads
+  ##Screen = B/w 481px to 1024px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
   .listcontainer {
     width:100%;
   }
   .selectedcard, .evolutioncard {
     width:50%;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .listcontainer {
+    width:100%;
+  }
+  .selectedcard, .evolutioncard {
+    width:100%;
   }
 }

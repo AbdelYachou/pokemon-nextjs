@@ -19,7 +19,8 @@ export function EvolutionCard({ id }) {
   }
   return (
     <div className={styles.center}>
-      <Pokeball /> Select an Evolution
+      <Pokeball className="pokeball"/>
+      <div>Select an Evolution</div>
     </div>
   );
 }

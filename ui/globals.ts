@@ -85,6 +85,11 @@ const GlobalStyle = createGlobalStyle`
     background: ${DARK};
   }
 
+  .pokeball {
+    fill: grey;
+    width: 60%;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;

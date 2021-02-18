@@ -19,8 +19,8 @@ export function PokemonsList({ onPokemonSelected }) {
         <ul className={styles.pokemonslist}>
           {data.getPokemons.map(pokemon => (
             <li className={styles.card} key={pokemon.id} onClick={(e)=>{onPokemonSelected(e);onCardSelected(e)}}>
-            <div className={pokemon.num===selectedCard ? styles.cardactive:styles.carddeactive}>
-              <input type="image" src={pokemon.img} value={pokemon.num} className={styles.cardimage}/>
+              <div className={pokemon.num===selectedCard ? styles.cardactive:styles.carddeactive}>
+                <input type="image" src={pokemon.img} value={pokemon.num} className={styles.cardimage}/>
               </div>
             </li>
           ))}

@@ -49,6 +49,7 @@ export function SelectedCard({ id, onChange }) {
   }
   return (
     <div className={styles.center}>
-      <Pokeball /> Select a Pokemon
+      <Pokeball className="pokeball"/>
+      <div>Select a Pokemon</div>
     </div>
   );}
