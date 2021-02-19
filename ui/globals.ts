@@ -70,8 +70,9 @@ const GlobalStyle = createGlobalStyle`
 
   .logo {
     max-width: 100%;
-    max-height: 50px;
+    max-height: 60px;
     display: block;
+    margin-bottom: 30px;
   }
 
   .footer {

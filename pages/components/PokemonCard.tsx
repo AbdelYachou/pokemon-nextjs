@@ -2,18 +2,19 @@ import styles from './PokemonCard.module.css'
 
 export function PokemonCard({ pokemon }) {
   return (
-    <div>
+    <div className={styles.info}>
+    <div className={styles.innerinfo}>
+      <img src={pokemon.img} />
       <div className={styles.presentation}>
-        <img src={pokemon.img} />
-        <div>{pokemon.name} </div>
-        <div>{pokemon.type.map(type => (<span key={type}> {type} </span>))} </div>
+        <div className={[styles.title, styles.name].join(' ')}>{pokemon.name} </div>
+        <div>{pokemon.type.map(type => (<span className={styles.type} key={type}> {type} </span>))} </div>
+        <div className={styles.details}>
+          <div><span className={styles.title}>Height:</span> {pokemon.height} </div>
+          <div><span className={styles.title}>Height: {pokemon.weight}</span> </div>
+          <div><span className={styles.title}>Weaknesses:</span> {pokemon.weaknesses.join(', ')} </div>
+        </div>
       </div>
-
-      <div className={styles.details}>
-        <div>Height: {pokemon.height} </div>
-        <div>Height: {pokemon.weight} </div>
-        <div>Weaknesses: {pokemon.weaknesses.join(', ')} </div>
-      </div>
+    </div>
     </div>
   );
 }

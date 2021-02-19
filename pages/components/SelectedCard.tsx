@@ -18,23 +18,12 @@ export function SelectedCard({ id, onChange }) {
       return (
         <div>
           <PokemonCard pokemon={pokemon} />
-          {pokemon.prev_evolution && <div>
-            {pokemon.prev_evolution.map(pokemon => (
-              <div className={styles.evolution} key={pokemon.num} onClick={onChange}>
-              Prev Evolution
-                <div>
-                  <button value={pokemon.num}>
-                    {pokemon.name}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-          }
-          {pokemon.next_evolution && <div>
-              {pokemon.next_evolution.map(pokemon => (
-                <div className={styles.evolution} key={pokemon.num} onClick={onChange}>
-                Next Evolution
+          <br />
+          <div className={styles.evolution}>
+            {pokemon.prev_evolution && <div>
+              {pokemon.prev_evolution.map(pokemon => (
+                <div className={styles.evolutionlink} key={pokemon.num} onClick={onChange}>
+                Prev Evolution
                   <div>
                     <button value={pokemon.num}>
                       {pokemon.name}
@@ -43,7 +32,21 @@ export function SelectedCard({ id, onChange }) {
                 </div>
               ))}
             </div>
-          }
+            }
+            {pokemon.next_evolution && <div>
+                {pokemon.next_evolution.map(pokemon => (
+                  <div className={styles.evolutionlink} key={pokemon.num} onClick={onChange}>
+                  Next Evolution
+                    <div>
+                      <button value={pokemon.num}>
+                        {pokemon.name}
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            }
+          </div>
         </div>
       );
   }
