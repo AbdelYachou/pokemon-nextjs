@@ -10,7 +10,7 @@ export function PokemonCard({ pokemon }) {
         <div>{pokemon.type.map(type => (<span className={styles.type} key={type}> {type} </span>))} </div>
         <div className={styles.details}>
           <div><span className={styles.title}>Height:</span> {pokemon.height} </div>
-          <div><span className={styles.title}>Height: {pokemon.weight}</span> </div>
+          <div><span className={styles.title}>Weight: {pokemon.weight}</span> </div>
           <div><span className={styles.title}>Weaknesses:</span> {pokemon.weaknesses.join(', ')} </div>
         </div>
       </div>
