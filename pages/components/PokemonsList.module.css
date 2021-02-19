@@ -1,8 +1,8 @@
 .pokemonslist {
   display: grid;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   padding-inline-start: 0;
-  grid-gap: 0 10px;
+  row-gap: 10px;
 }
 
 .card {
@@ -10,6 +10,46 @@
   text-align: center;
 }
 
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.cardactive {
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.carddeactive {
+  background: '#1b1d1c';
+}
+
 .cardimage {
   height: auto;
+  object-fit: fill;
+  width: 70%;
+}
+
+/*
+  ##Device = Tablets,
+  ##Screen = B/w 481ppx to 1024px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .pokemonslist {
+    grid-template-columns: repeat(9, minmax(80px, 1fr));
+    max-height: 120px;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .pokemonslist {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    max-height: 150px;
+  }
 }

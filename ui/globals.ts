@@ -70,18 +70,25 @@ const GlobalStyle = createGlobalStyle`
 
   .logo {
     max-width: 100%;
-    max-height: 50px;
+    max-height: 60px;
     display: block;
+    margin-bottom: 30px;
   }
 
   .footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    padding-top: 50px;
+    height: 60px;
+    padding-top: 30px;
     width: 100%;
     color: grey;
     background: ${DARK};
+  }
+
+  .pokeball {
+    fill: grey;
+    width: 60%;
   }
 
   @media (prefers-reduced-motion: reduce) {

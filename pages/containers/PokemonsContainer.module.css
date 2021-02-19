@@ -1,3 +1,53 @@
-.conatiner {
-  width: min-content;
+.container { /*split*/
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.listcontainer { /*left*/
+  float: left;
+  width: 25%;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.selectedcard{
+  float: left;
+  width: 37.5%;
+  padding: 0 4rem 0 4rem;
+}
+
+.evolutioncard{
+  float: left;
+  width: 37.5%;
+  padding: 0 4rem 0 4rem;
+}
+
+/*
+  ##Device = Tablets, Ipads
+  ##Screen = B/w 481px to 1024px
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .listcontainer {
+    width:100%;
+  }
+  .selectedcard, .evolutioncard {
+    width:50%;
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .listcontainer {
+    width:100%;
+  }
+  .selectedcard, .evolutioncard {
+    width:100%;
+    padding: 0 2rem 0 2rem;
+  }
 }
