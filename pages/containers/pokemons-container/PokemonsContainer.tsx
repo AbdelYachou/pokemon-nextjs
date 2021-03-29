@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from './PokemonsContainer.module.css'
-import { PokemonsList } from '../components/PokemonsList';
+import { PokemonsList } from '../components/pokemons-list/PokemonsList';
 import { SelectedCard } from '../components/SelectedCard';
 import { EvolutionCard } from '../components/EvolutionCard';
 

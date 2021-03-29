@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Logo from '../ui/svg/pokemon-logo.svg';
-import { PokemonsContainer } from './containers/PokemonsContainer';
+import { PokemonsContainer } from './containers/pokemons-container/PokemonsContainer';
 import { Footer } from './containers/Footer';
 
 const Home = () => {
