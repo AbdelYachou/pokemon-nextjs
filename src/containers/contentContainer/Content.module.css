@@ -1,0 +1,44 @@
+.mainContainer {
+  height: 100%;
+  margin-bottom: 4rem;
+}
+
+.pokemonsWrapper {
+  height: 25vh;
+  overflow: hidden scroll;
+}
+
+.cardsContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+@media (min-width: 420px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardsContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    flex-direction: row;
+  }
+
+  .pokemonsWrapper {
+    height: 80vh;
+  }
+
+  .cardsContainer {
+    height: 80vh;
+    margin: auto;
+  }
+} ;

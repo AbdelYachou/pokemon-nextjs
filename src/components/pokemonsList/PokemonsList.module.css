@@ -1,0 +1,30 @@
+.pokemonsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  height: 100%;
+}
+
+.pokemonWrapper {
+  border-radius: 10px;
+  margin: auto;
+}
+
+.pokemonWrapper:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.selected {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.cardImg {
+  height: 6rem;
+  width: 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .pokemonsContainer {
+    grid-template-columns: repeat(3, 7rem);
+    row-gap: 1rem;
+  }
+} ;

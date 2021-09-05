@@ -1,0 +1,10 @@
+.center {
+    text-align: center;
+}
+
+.pokeball {
+    height: 6em;
+    width: 6em;
+    margin: auto;
+    fill: grey;
+}
