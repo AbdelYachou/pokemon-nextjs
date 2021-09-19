@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const GET_POKEMONS = gql`
+const GET_POKEMONS = gql`
 query pokemons {
   getPokemons {
     id
@@ -10,3 +10,5 @@ query pokemons {
   }
 }
 `;
+
+export { GET_POKEMONS };

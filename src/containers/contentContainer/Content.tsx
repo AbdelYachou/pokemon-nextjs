@@ -18,7 +18,7 @@ const Content: React.FC = () => {
 
   return (
     <main className={styles.mainContainer}>
-      <section className={styles.pokemonsWrapper}>
+      <section className={styles.listWrapper}>
         <PokemonsList onChange={onPokemonSelected} />
       </section>
       <section className={styles.cardsContainer}>

@@ -8,17 +8,19 @@ interface Props {
   navigationCallback?: (x?: string) => void;
 }
 
-const SelectedCard: React.FC<Props> = ({ id, navigationCallback }: Props) => {
+const Card: React.FC<Props> = ({ id, navigationCallback }: Props) => {
+  const tagName = navigationCallback ? ' Pokemon' : 'n Evolution'
   if (!id) {
     return (
       <PokeballCard>
-        <p>Select a Pokemon</p>
+        <p>Select a{tagName}</p>
       </PokeballCard>
     );
   }
 
-  const { error, data } = useQuery(GET_POKEMON, { variables: { id } });
-  if (error) return <> `Error! ${error.message}` </>;
+  const { data, error, loading } = useQuery(GET_POKEMON, { variables: { id } });
+  if (error) return <>`Error! ${error.message}`</>;
+  if (loading) return <>Loading...</>;
 
   const pokemon = data?.getPokemon;
   if (!pokemon) return null;
@@ -33,4 +35,4 @@ const SelectedCard: React.FC<Props> = ({ id, navigationCallback }: Props) => {
   );
 };
 
-export default SelectedCard;
+export default Card;

@@ -19,7 +19,7 @@ interface Props {
 const Navigation: React.FC<Props> = ({ pokemon, onChange }: Props) => {
   return (
     <div className={styles.evolution}>
-      {pokemon.prev_evolution?.map((evolution) => (
+      {pokemon.prev_evolution?.map(evolution => (
         <div
           className={styles.evolutionLink}
           key={evolution.num}
@@ -29,7 +29,7 @@ const Navigation: React.FC<Props> = ({ pokemon, onChange }: Props) => {
           <button>{evolution.name}</button>
         </div>
       ))}
-      {pokemon.next_evolution?.map((evolution) => (
+      {pokemon.next_evolution?.map(evolution => (
         <div
           className={styles.evolutionLink}
           key={evolution.num}

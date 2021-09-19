@@ -5,4 +5,5 @@
   bottom: 0;
   padding: 1.5rem 1rem 1rem 1rem;
   color: lightgrey;
+  max-height: 10vh;
 }

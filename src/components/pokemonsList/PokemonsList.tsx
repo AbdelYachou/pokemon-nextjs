@@ -16,8 +16,8 @@ const PokemonsList: React.FC<Props> = ({ onChange }: Props) => {
   }
 
   const { data, error, loading } = useQuery(GET_POKEMONS);
-  if (error) return <> `Error! ${error.message}` </>;
-  if (loading) return <> "Loading..." </>;
+  if (error) return <>`Error! ${error.message}`</>;
+  if (loading) return <>Loading...</>;
 
   return (
     <ul className={styles.pokemonsContainer}>

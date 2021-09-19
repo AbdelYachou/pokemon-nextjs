@@ -20,7 +20,7 @@ const PokemonCard: React.FC<Props> = ({ pokemon }: Props) => {
       <img src={pokemon.img} alt={pokemon.name} />
       <div className={styles.info}>
         <div className={styles.title}>
-          <h1 className={styles.name}>{pokemon.name} </h1>
+          <h1 className={styles.name}>{pokemon.name}</h1>
           <p>
             {pokemon.type.map((type) => (
               <span className={styles.type} key={type}>
@@ -30,15 +30,9 @@ const PokemonCard: React.FC<Props> = ({ pokemon }: Props) => {
           </p>
         </div>
         <div className={styles.details}>
-          <p>
-            <strong>Height:</strong> {pokemon.height}
-          </p>
-          <p>
-            <strong>Weight:</strong> {pokemon.weight}
-          </p>
-          <p>
-            <strong>Weaknesses:</strong> {pokemon.weaknesses.join(", ")}
-          </p>
+          <p><strong>Height: </strong>{pokemon.height}</p>
+          <p><strong>Weight: </strong>{pokemon.weight}</p>
+          <p><strong>Weaknesses: </strong>{pokemon.weaknesses.join(", ")}</p>
         </div>
       </div>
     </div>

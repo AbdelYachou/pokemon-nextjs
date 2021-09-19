@@ -1,26 +1,22 @@
 .mainContainer {
-  height: 100%;
-  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
 }
 
-.pokemonsWrapper {
+.listWrapper {
   height: 25vh;
   overflow: hidden scroll;
 }
 
 .cardsContainer {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  flex: 1;
   margin: 1rem;
 }
 
 @media (min-width: 420px) {
-  .mainContainer {
-    display: flex;
-    flex-direction: column;
-  }
-
   .cardsContainer {
     flex-direction: row;
     justify-content: space-around;
@@ -33,7 +29,7 @@
     flex-direction: row;
   }
 
-  .pokemonsWrapper {
+  .listWrapper {
     height: 80vh;
   }
 

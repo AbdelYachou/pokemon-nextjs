@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const GET_POKEMON = gql`
+const GET_POKEMON = gql`
 query pokemon ($id: String!){
   getPokemon(uid: $id) {
     num
@@ -21,3 +21,5 @@ query pokemon ($id: String!){
   }
 }
 `;
+
+export { GET_POKEMON };

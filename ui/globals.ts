@@ -30,7 +30,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${FONT_BASE_SIZE}px;
   }
 
-  body {
+  body,
+  #__next {
     background: ${DARK};
     color: ${LIGHT};
     font-family: ${FONT_PRIMARY};
@@ -73,4 +74,4 @@ const GlobalStyle = createGlobalStyle`
   }
   `;
 
-  export default GlobalStyle;
+export default GlobalStyle;
